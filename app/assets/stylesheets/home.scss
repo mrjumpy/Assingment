@@ -2,6 +2,9 @@
    font-family: HelveticaNeueDeskInterface;
    max-width: 1500px;
    margin: 0px auto;
+    img{
+    margin: 0px auto;
+   }
   }
   
   #homepage-top {
@@ -115,20 +118,14 @@
     font-size: 18px;
     text-align: center;
    }
-   .left-contents {
-    @media screen and (max-width: 939px) {
-     display: none;
+   @media screen and (max-width: 768px) {
+    .col-xs-12{
+     margin-top: 20px;
     }
+     
    }
-   .right-contents {
-    padding-left: 20px;
-    @media screen and (max-width: 939px) {
-     padding-left: 10px;
-     img {
-      width: 100%;
-     }
-    }
-   }
+    
+    
   }
   
   #homepage-loyal {
@@ -136,6 +133,7 @@
    color: #FFFFFF;
    background: url(loyal.png);
    font-family: HelveticaNeueDeskInterface;
+   
    @media screen and (max-width: 939px) {
     h2, p {
      text-align: center;
@@ -151,12 +149,15 @@
   }
   
   #homepage-boost-sale {
-   padding: 110px 0 80px;
+   padding: 81px 0 80px;
    background: url(boost-sale.png);
+   background-position-y: 100%;
+   background-repeat-y: no-repeat;
+   img{
+    margin-top: 24px;
+   }
    h2 {
-    font-family: HelveticaNeueDeskInterface;
-    margin-top: -19px;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     font-weight: 400;
    }
    p {
@@ -167,9 +168,7 @@
    @media screen and (max-width: 940px) {
     padding-right: 10px;
     padding-left: 10px;
-    .nopadding:first-child {
-     display: none;
-    }
+    
     h2 {
      text-align: center;
     }
@@ -186,9 +185,7 @@
    background-repeat: no-repeat;
    background-size: cover;
    color: #fff;
-   img {
-    margin: 0px auto;
-   }
+   
    h2 {
     font-weight: 400;
     margin-top: 36px;
@@ -249,25 +246,38 @@
    .fill6 {
     background-color: #44B1DF;
    }
-   .col-md-2 {
-    text-align: center;
-    font-weight: 400;
-    padding: 0 9px 0 9px;
+  
+   .col-xs-12{
+    margin-bottom:20px;
    }
-   .col-md-4 > div {
+   
+  
+   
+   .col-md-6 > div {
+    text-align: center;
     height: 140px;
-    width: 140px;
+    width: 100%;
     font-size: 0;
     margin: auto;
+    
+     @media screen and (max-width: 992px) {
+     height: 125px;
+    width: 125px;
+    
    }
-   .col-md-4 > div:before {
+    @media screen and (max-width: 768px) {
+     height: 140px;
+     width: 100%;
+    }
+   }
+   .col-md-6 > div:before {
     content: 'for vertical alig';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     width: 0;
    }
-   .col-md-4 p {
+   .col-md-6 p {
     display: inline-block;
     font-size: 18px;
     vertical-align: middle;
