@@ -8,10 +8,14 @@ $navbar-padding-horizontal: 13px;
 $navbar-padding-vertical: 26px;
 $navbar-height: auto;
 $grid-gutter-width: 20px;
+
 $container-desktop: (940px);
 $container-large-desktop: (940px);
-$container-sm:(940px);
-$screen-sm-min:(940px);
+$container-md:(940px);
+$container-sm:(100%);
+//$screen-sm-min:(940px);
+$grid-float-breakpoint:(992px);
+ 
 $form-group-margin-bottom: 13px;
 $border-radius-base: 0px;
 $input-border: rgba(0, 0, 0, 0.2);
@@ -29,6 +33,7 @@ $input-height-base: 40px;
 }
 
 .container {
+     
     padding: 0px 10px 0px 10px;
 }
 
