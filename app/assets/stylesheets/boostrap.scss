@@ -13,7 +13,7 @@ $container-desktop: (940px);
 $container-large-desktop: (940px);
 $container-md:(940px);
 $container-sm:(100%);
-//$screen-sm-min:(940px);
+ 
 $grid-float-breakpoint:(992px);
  
 $form-group-margin-bottom: 13px;
@@ -28,6 +28,8 @@ $input-height-base: 40px;
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+//default-my-opts
 .nopadding {
     padding: 0px;
 }

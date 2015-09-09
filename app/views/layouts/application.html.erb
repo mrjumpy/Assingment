@@ -7,26 +7,41 @@
   
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <%= csrf_meta_tags %>
-  
+    <!--[if (gt IE 9)|!(IE)]><!--> <html class="gtie9"> <!--<![endif]-->
+    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!--[if IE]>
+       <style type="text/css">
+    
+       .opacity-40 { 
+           background:transparent;
+           filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#661E1E1E,endColorstr=#661E1E1E); 
+           zoom: 1;
+        } 
+        </style>
+    <![endif]-->
 </head>
-<%=render "common/navbar" %>
+
 <body>
-
+<%=render "common/navbar" %>
 <%= yield %>
-
 </body>
 <%=render "common/footer" %>
 </html>
 
 <script>
 $(function(){
-    $("#homepage-top").backstretch("assets/section1.png");  
-    $('#homepage-loyal').backstretch("assets/loyal.png");  
+  if ($('html').is('.gtie9')) {
+      $("#homepage-top").backstretch("assets/section1.png");  
+      $('#homepage-loyal').backstretch("assets/loyal.png");  
+  }
+  //support IE8/9 placeholder
+  $('input, textarea').placeholder();  
     
  });
 </script>
